@@ -1,8 +1,24 @@
 const hre = require("hardhat");
 
 async function main() {
+
+
+  var randNum = Math.floor(Math.random() * 50);
+
+  var color = "0";
+
+  if(randNum%2==0){
+    color = "black";
+  }else{
+    color="red";
+  }
+
+
   const Greeter = await hre.ethers.getContractFactory("Greeter");
-  const greeter = await Greeter.deploy("red", 0, false, "Lose :(");
+
+
+
+  const greeter = await Greeter.deploy(color, randNum, false, "Lose :(");
 
   await greeter.deployed();
 

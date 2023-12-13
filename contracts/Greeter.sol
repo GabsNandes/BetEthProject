@@ -32,27 +32,29 @@ contract Greeter {
 
         
 
-        if(compareStrings(roleta1.color,"red")==true){
+        
             uint numDecided = random();
             roleta1.numSorted = numDecided;
 
             if(numDecided%2==0){
 
-                roleta1.color = "red"; //simula vermelho
+                roleta1.color = "black"; //simula vermelho
 
             }else{
 
-                roleta1.color = "black"; //simula preto
+                roleta1.color = "red"; //simula preto
 
         }
-        }
+        
 
     }
 
     function random() public view returns (uint) {
-        uint randNonce = 0;
-        uint randomHash = uint(keccak256(abi.encodePacked(block.timestamp, msg.sender, randNonce)));
-        return randomHash % 100;
+        require(blockhash(block.number - 1) != bytes32(0), "Blockhash not available");
+
+        uint256 blockValue = uint256(blockhash(block.number - 1));
+        uint256 randomNumber = uint256(keccak256(abi.encodePacked(block.timestamp, blockValue, msg.sender)));
+        return (randomNumber % 50);
     }
 
     constructor(string memory _colorChosen, uint8 _numChosen, bool _winning, string memory _winner) {
@@ -108,19 +110,27 @@ contract Greeter {
         return result;
     }
 
-    function greet() public view returns (string memory) {
+    function greet() public view returns (string memory, string memory) {
         
 
         string memory message;
+        string memory message2;
 
         string memory test;
+        string memory test2;
 
-        test = uint2str(winningNumber);
+        uint8 help;
+
+        help = uint8(winningNumber);
+
+        test = uint2str(help);
+
+        test2 = uint2str(numChosen);
 
         message = string.concat("Winning Color: ", winningColor," Winning number: ", test, " ", winner);
-
+        message2 = string.concat("You picked: ", test2, " and ",  colorChosen);
         
-        return (message);
+        return (message, message2);
         
     }
 
@@ -135,19 +145,30 @@ contract Greeter {
 
         
 
+        
+
         Roleta storage roleta1 = roletas[0];
 
         winningColor = roleta1.color;
 
+        console.log(roleta1.numSorted);
+
         if(compareStrings(roleta1.color,colorChosen)==true){
+
             if(roleta1.numSorted==numChosen){
                 winning = true;
+                winner = "You Win!(BIG WIN)";
+            }else{
                 winner = "You Win!";
             }
         }else{
-            winning = true;
-            winner = "You Lose!";
-            console.log("You Lose");
+
+            if(roleta1.numSorted==numChosen){
+                winning = true;
+                winner = "You Win!";
+            }else{
+                winner = "You Lose!";
+            }
         }
     }
 }
