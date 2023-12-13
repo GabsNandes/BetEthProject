@@ -1,6 +1,8 @@
 import Beter from "./artifacts/contracts/Beter.sol/Beter.json";
 import "./App.css";
 
+import myImage from './Bet Eth.jpg';
+
 import { useState } from "react";
 
 import { ethers } from "ethers";
@@ -11,7 +13,7 @@ import { ethers } from "ethers";
 
 
 // The contract address
-const BeterAddress = "0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0";
+const BeterAddress = "0x5FbDB2315678afecb367f032d93F642f64180aa3";
 
 function App() {
   // Property Variables
@@ -88,7 +90,7 @@ function App() {
       <div className="App-header">
         {/* DESCRIPTION  */}
         <div className="description">
-          <h1>BetEth</h1>
+        <img src={myImage} width={400} />
           
         </div>
         {/* BUTTONS - Fetch and Set */}
