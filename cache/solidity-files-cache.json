@@ -1,10 +1,10 @@
 {
   "_format": "hh-sol-cache-2",
   "files": {
-    "C:\\Users\\regin\\Downloads\\fuck\\BetEth\\contracts\\Greeter.sol": {
-      "lastModificationDate": 1702480756782,
-      "contentHash": "fb72b916eda67a858943333aee57f18b",
-      "sourceName": "contracts/Greeter.sol",
+    "C:\\Users\\regin\\OneDrive\\Documentos\\GitHub\\BetEthProject\\BetEthProject\\contracts\\Beter.sol": {
+      "lastModificationDate": 1702498350053,
+      "contentHash": "db8c1ea47e7d19eb8333c679e0cb5438",
+      "sourceName": "contracts/Beter.sol",
       "solcConfig": {
         "version": "0.8.12",
         "settings": {
@@ -35,79 +35,7 @@
         "^0.8.12"
       ],
       "artifacts": [
-        "Greeter"
-      ]
-    },
-    "C:\\Users\\regin\\Downloads\\fuck\\BetEth\\node_modules\\hardhat\\console.sol": {
-      "lastModificationDate": 1702408607638,
-      "contentHash": "cc4777addd464ea56fa35b1c45df0591",
-      "sourceName": "hardhat/console.sol",
-      "solcConfig": {
-        "version": "0.8.12",
-        "settings": {
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        ">=0.4.22 <0.9.0"
-      ],
-      "artifacts": [
-        "console"
-      ]
-    },
-    "C:\\Users\\regin\\OneDrive\\Documentos\\GitHub\\BetEthProject\\BetEthProject\\contracts\\Greeter.sol": {
-      "lastModificationDate": 1702489817267,
-      "contentHash": "cc04f1e63ef3d32f07d6fd663ee2a545",
-      "sourceName": "contracts/Greeter.sol",
-      "solcConfig": {
-        "version": "0.8.12",
-        "settings": {
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [
-        "hardhat/console.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.12"
-      ],
-      "artifacts": [
-        "Greeter"
+        "Beter"
       ]
     },
     "C:\\Users\\regin\\OneDrive\\Documentos\\GitHub\\BetEthProject\\BetEthProject\\node_modules\\hardhat\\console.sol": {

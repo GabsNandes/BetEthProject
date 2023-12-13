@@ -14,15 +14,15 @@ async function main() {
   }
 
 
-  const Greeter = await hre.ethers.getContractFactory("Greeter");
+  const Beter = await hre.ethers.getContractFactory("Beter");
 
 
 
-  const greeter = await Greeter.deploy(color, randNum, false, "Lose :(");
+  const beter = await Beter.deploy(color, randNum, false, "Lose :(");
 
-  await greeter.deployed();
+  await beter.deployed();
 
-  console.log("Greeter deployed to:", greeter.address);
+  console.log("Beter deployed to:", beter.address);
 }
 
 main()
