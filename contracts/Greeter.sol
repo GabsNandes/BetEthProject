@@ -145,6 +145,8 @@ contract Greeter {
                 winner = "You Win!";
             }
         }else{
+            winning = true;
+            winner = "You Lose!";
             console.log("You Lose");
         }
     }
